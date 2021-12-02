@@ -5,14 +5,41 @@ const Student = db.define("student", {
 
   firstname: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   },
 
   lastname: {
     type: Sequelize.STRING,
-    allowNull: false
-  }
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
 
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+      isEmail: true
+    }
+  },
+
+  imageurl: {
+    type: Sequelize.STRING,
+    defaultValue: '../student_image'
+  },
+
+  gpa: {
+    type: Sequelize.FLOAT,
+    validate: {
+      min: 0.0,
+      max: 4.0
+    }
+  }
 });
 
 module.exports = Student;
