@@ -30,7 +30,7 @@ const Student = db.define("student", {
 
   imageurl: {
     type: Sequelize.STRING,
-    defaultValue: '../student_image'
+    defaultValue: '../student_image.png'
   },
 
   gpa: {
