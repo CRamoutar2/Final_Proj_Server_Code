@@ -29,13 +29,14 @@ const Student = db.define("student", {
   },
 
   imageurl: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     defaultValue: '../student_image.png'
   },
 
   gpa: {
     type: Sequelize.FLOAT,
     validate: {
+      notEmpty: true,
       min: 0.0,
       max: 4.0
     }
