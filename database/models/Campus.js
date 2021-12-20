@@ -13,7 +13,7 @@ const Campus = db.define("campus", {
 
   imageUrl: {
     type: Sequelize.STRING,
-    defaultValue: '../campus_image.png',
+    defaultValue: "https://cdn.onlinewebfonts.com/svg/img_379742.png",
     allowNull: true,  
     validate: {
       isURL: true
