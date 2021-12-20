@@ -21,8 +21,16 @@ const seedDB = async () => {
 		imageURL: "https://th-thumbnailer.cdn-si-edu.com/5a79C6jJ8BrChMX5tgEKiMI_qqo=/1000x750/filters:no_upscale():focal(792x601:793x602)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/52/e4/52e44474-c2dc-41e0-bb77-42a904695196/this-image-shows-a-portrait-of-dragon-man-credit-chuang-zhao_web.jpg",
 		gpa: 1.2
 		});
+	
+		const dummy_student2 = await Student.create({
+			firstname: "Melissa",
+      lastname: "Lynch",
+		email: "MLynch@gmail.com",
+		gpa: 4.0
+		});
 
 	await dummy_student.setCampus(dummy_campus);
+	await dummy_student2.setCampus(dummy_campus2);
 	
 }
 
